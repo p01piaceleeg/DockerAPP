@@ -9,7 +9,7 @@ ADD info.php /var/www/html
 
 RUN cd /var/www/html && \
 	curl https://wordpress.org/latest.tar.gz && \
-	tar -vxzf wordpress.tar.qz && \
+	tar -vxzf wordpress.tar.gz && \
 	chown -R apache:apache /var/www
 
 EXPOSE 80
