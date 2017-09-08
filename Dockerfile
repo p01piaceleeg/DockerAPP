@@ -1,6 +1,6 @@
 FROM centos
 MAINTAINER peya
-RUN yum update -y && yum install httpd -y
-EXPOSE 8080
+RUN yum upgrade -y && yum install httpd -y && yum install php -y
+EXPOSE 80
 VOLUME ["/sys/fs/cgroup","/var/www/html"]
 CMD ["httpd","-D","FOREGROUND"]
